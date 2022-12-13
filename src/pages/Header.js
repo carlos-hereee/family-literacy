@@ -1,30 +1,53 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import shortid from "shortid";
 import Appname from "../atoms/Appname";
-import Logo from "../atoms/Logo";
+import BurgerButton from "../atoms/BurgerButton";
+import Navlink from "../atoms/Navlink";
 
 const Header = () => {
   const [menu, setMenu] = useState([
-    { name: "home", isActive: true, uid: shortid.generate() },
-    { name: "about", isActive: false, uid: shortid.generate() },
-    { name: "services", isActive: false, uid: shortid.generate() },
-    { name: "booking", isActive: false, uid: shortid.generate() },
-    { name: "gallery", isActive: false, uid: shortid.generate() },
-    { name: "checkout", isActive: false, uid: shortid.generate() },
-    { name: "dashboard", isActive: false, uid: shortid.generate() },
+    { name: "Home", isActive: true, uid: shortid.generate() },
+    { name: "About", isActive: false, uid: shortid.generate() },
+    { name: "Service", isActive: false, uid: shortid.generate() },
+    { name: "Donate", isActive: false, uid: shortid.generate() },
+    { name: "Contact", isActive: false, uid: shortid.generate() },
   ]);
+  const [isActive, setActive] = useState(false);
+  const [isClose, setClose] = useState(false);
+  const [burger, setBurger] = useState({ name: "burger" });
+  useEffect(() => {
+    const endAnimation = () => setClose(true);
+    // TODO: close navigation is clicks outside container
+    // const onClick = (event) => {
+    //   // console.log("navRef.current", navRef.current);
+    //   if (navRef.current && !navRef.current.contains(event.target)) {
+    //     setClose(true);
+    //   }
+    // };
+    document.addEventListener("animationend", endAnimation, true);
+    // document.addEventListener("mousedown", onClick, true);
+    return () => {
+      document.removeEventListener("animationend", endAnimation, true);
+      // document.removeEventListener("mousedown", onClick, true);
+    };
+  }, []);
+  console.log("isClose", isClose, " isActive", isActive);
+  const handleClick = () => {
+    setActive(!isActive);
+    setBurger({ name: isActive ? "burger" : "x" });
+  };
+
+  // TODO: closing annimation
   return (
     <header>
-      <head>
-        <title>Family Literacy Network</title>
-      </head>
       <Appname />
       <nav className="primary-navigation">
-        <ul className="navigation">
+        <BurgerButton options={burger} click={handleClick} />
+        <ul
+          className="navigation"
+          data-state={isActive ? "open" : isClose ? "closing" : "close"}>
           {menu.map((m) => (
-            <li key={m.uid} className="nav-link">
-              {m.name}
-            </li>
+            <Navlink key={m.uid} data={m} />
           ))}
         </ul>
       </nav>

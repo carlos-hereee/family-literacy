@@ -1,11 +1,12 @@
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   padding: 1rem;
-  background-color: var(--secondary-color);
-  border-bottom: 1px solid var(--secondary-color2);
+  background-color: #{$secondary-color};
+  border-bottom: 1px solid #{$secondary-color2};
   position: sticky;
   top: 0;
   z-index: 2;
@@ -13,34 +14,57 @@ header {
     display: flex;
     justify-content: flex-start;
   }
+  @include devices(mobile) {
+    flex-wrap: nowrap;
+  }
 }
 .primary-navigation {
-  /* position: relative; */
+  position: relative;
 }
 .navigation {
   display: flex;
   justify-content: space-around;
-  /* position: absolute; */
   list-style: none;
   border-radius: 4px;
-  padding: 1rem;
   gap: 1rem;
-  /* gap: 1rem;
-  top: 100%;
-  right: 0%; 
-  transition: clip-path ease-in-out 700ms; */
+  transition: clip-path ease-in-out 700ms;
+  @include devices(mobile) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0%;
+  }
 }
-
 .navigation[data-state="open"] {
-  animation: circleOpen 750ms ease-in-out forwards;
-  display: block;
+  @include devices(mobile) {
+    display: block;
+    animation: circleOpen 750ms ease-in-out forwards;
+  }
 }
-
 .navigation[data-state="closing"] {
-  display: block;
-  animation: circleClose 750ms ease-in-out forwards;
+  @include devices(mobile) {
+    display: block;
+    animation: circleClose 750ms ease-in-out forwards;
+  }
+}
+.navigation[data-state="close"] {
+  @include devices(mobile) {
+    display: none;
+  }
 }
 
-.navigation[data-state="close"] {
+.nav-link {
+  flex: 1;
+  position: relative;
+  padding: 1rem;
+  text-decoration: none;
+  &:hover {
+    background-color: #{$secondary-color2};
+  }
+}
+.burger {
   display: none;
+  @include devices(mobile) {
+    display: block;
+  }
 }
