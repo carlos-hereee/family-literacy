@@ -110,7 +110,6 @@
 .card-body {
   display: flex;
   flex-direction: column;
-  max-height: 15rem;
   &:has(> .btn-primary) {
     justify-content: space-between;
     .btn-primary {

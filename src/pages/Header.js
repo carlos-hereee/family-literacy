@@ -25,7 +25,6 @@ const Header = () => {
       // document.removeEventListener("mousedown", onClick, true);
     };
   }, []);
-  console.log("isClose", isClose, " isActive", isActive);
   const handleClick = () => {
     setActive(!isActive);
     setBurger({ name: isActive ? "burger" : "x" });
