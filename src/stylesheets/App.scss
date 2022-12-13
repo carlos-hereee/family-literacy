@@ -39,6 +39,8 @@ button {
   color: var(--text-color3);
 }
 .app-body {
+  display: flex;
+  justify-content: center;
   padding: 1rem;
 }
 
