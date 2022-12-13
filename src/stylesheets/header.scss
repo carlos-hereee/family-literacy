@@ -55,9 +55,11 @@ header {
 
 .nav-link {
   flex: 1;
-  position: relative;
   padding: 1rem;
+  border-radius: 4px;
+  position: relative;
   text-decoration: none;
+  margin: auto;
   &:hover {
     background-color: #{$secondary-color2};
   }

@@ -1,17 +1,11 @@
-import { useEffect, useState } from "react";
-import shortid from "shortid";
+import { useContext, useEffect, useState } from "react";
 import Appname from "../component/atoms/Appname";
 import BurgerButton from "../component/atoms/BurgerButton";
 import Navlink from "../component/atoms/Navlink";
+import { AppContext } from "../utils/AppContext";
 
 const Header = () => {
-  const [menu, setMenu] = useState([
-    { name: "Home", isActive: true, uid: shortid.generate() },
-    { name: "About", isActive: false, uid: shortid.generate() },
-    { name: "Service", isActive: false, uid: shortid.generate() },
-    { name: "Donate", isActive: false, uid: shortid.generate() },
-    { name: "Contact", isActive: false, uid: shortid.generate() },
-  ]);
+  const { menu } = useContext(AppContext);
   const [isActive, setActive] = useState(false);
   const [isClose, setClose] = useState(false);
   const [burger, setBurger] = useState({ name: "burger" });

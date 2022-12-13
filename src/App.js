@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Route, Routes } from "react-router";
 import Header from "./pages/Header";
+import Landing from "./pages/Landing";
 import NotFound from "./pages/Notfound";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
       <Header />
       <div className="app-body">
         <Routes>
-          {/* <Route exact path="/" element={<Landing />} /> */}
+          <Route exact path="/" element={<Landing />} />
           {/* <Route path="/about" element={<About />} /> */}
           {/* <Route path="/services" element={<Services />} /> */}
           {/* <Route path="/booking" element={<Booking />} /> */}
