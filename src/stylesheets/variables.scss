@@ -1,0 +1,50 @@
+/**
+for more options check out 
+
+this project is going to use the Unicorn glow color palette
+*/
+/* // background color */
+:root {
+  --primary-color: #7c83af;
+  --primary-color2: #525b92;
+  --primary-color3: #313a75;
+  --primary-color4: #182157;
+  --primary-color5: #080f3a;
+
+  --secondary-color: #fff4aa;
+  --secondary-color2: #d4c76a;
+  --secondary-color3: #aa9c39;
+  --secondary-color4: #807215;
+  --secondary-color5: #554a00;
+
+  --third-color: #ffd7aa;
+  --third-color2: #d4a26a;
+  --third-color3: #aa7539;
+  --third-color4: #804d15;
+  --third-color5: #552d00;
+
+  // --primary-color-hover: #080f3a;
+  // --primary-color-active: #525b92;
+  // --secondary-color: #d8bbd3;
+  // --secondary-color-hover: #b58ebc;
+
+  // --active-color: #feef7b;
+  // --active-color-hover: #d3c454;
+  // --danger: red;
+  // /* // text color */
+  // --active-text-color: #459be2;
+  // --primary-text-color: white;
+  // --primary-text-color-hover: #333;
+  // --primary-text-color-disable: gray;
+  // --secondary-text-color: #333;
+  // --secondary-text-color-hover: white;
+  // /* // box shadow color */
+  // --primary-shadow-color: purple;
+  // --secondary-shadow-color: #bb96c2;
+  /* // // readmore lines */
+  --max-lines: 2;
+  --line-height: 1.4;
+  /* //  media queries */
+  --table: 680px;
+  --mobile: 501px;
+}

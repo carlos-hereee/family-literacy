@@ -1,0 +1,19 @@
+@keyframes slide-left {
+  0% {
+    overflow: hidden;
+    transform: translateX(200px);
+  }
+  100% {
+    overflow: hidden;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

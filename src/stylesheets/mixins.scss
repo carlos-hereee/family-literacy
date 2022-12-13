@@ -1,0 +1,35 @@
+/* // We define the mixins for two major breakpoints mobile and tablet
+
+// $breakpoint is the variable that can have several values */
+@mixin devices($breakpoint) {
+
+  /* //the name of the mixin is devices */
+  @if $breakpoint ==tablet {
+    @media only screen and (max-width: #{$table}) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==mobile {
+    @media only screen and (max-width: #{$mobile}) {
+      @content;
+    }
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    overflow: hidden;
+    transform: translateX(200px);
+  }
+
+  100% {
+    overflow: hidden;
+    transform: translateX(0px);
+  }
+}
+
+/* // retrieve css variable */
+@function color($color-name) {
+  @return var(--data-color-#{$color-name});
+}
