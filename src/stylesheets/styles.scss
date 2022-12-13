@@ -1,0 +1,164 @@
+.btn-primary {
+  background-color: #{$primary-color};
+  color: #{$text-color};
+  flex: 1;
+  &:hover {
+    background-color: #{$primary-color2};
+    color: #{$text-color};
+  }
+  &:disabled {
+    background-color: #{$primary-color3};
+    color: #{$text-color};
+  }
+  &:focus {
+    background-color: #{$primary-color2};
+    color: #{$text-color};
+  }
+}
+.btn-secondary {
+  // box-shadow: none;
+  position: absolute;
+  background-color: #{$secondary-color};
+  color: #{$text-color};
+  right: 0;
+  padding: 1rem;
+  bottom: 3rem;
+  &:hover {
+    background-color: #{$secondary-color};
+    color: #{$text-color};
+  }
+  &:disabled {
+    background-color: #{$secondary-color2};
+    color: #{$text-color};
+  }
+  &:focus {
+    background-color: #{$secondary-color2};
+    color: #{$text-color};
+  }
+}
+.btn-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  position: relative;
+  .notification-count {
+    top: -0.5rem;
+    right: -0.5rem;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  // padding: 1rem;
+  @include devices(mobile) {
+    .card {
+      width: 100%;
+    }
+  }
+}
+.ribbon {
+  position: absolute;
+  top: 0.3rem;
+  right: -2.5rem;
+  rotate: 35deg;
+  background-color: purple;
+  border: 1px solid white;
+  color: white;
+  padding: 0.25rem 4rem;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #{$text-color};
+  padding: 1rem;
+  border-radius: 4px;
+}
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: #{$text-color};
+  padding: 1rem;
+  border-radius: 4px;
+  min-width: 200px;
+  max-width: 600px;
+  gap: 1rem;
+  box-shadow: 0 1px 5px 1px #{$shadow-color};
+  &:has(> .ribbon) {
+    position: relative;
+    border-color: #{$shadow-color2};
+    box-shadow: 0 1px 5px 1px #{$shadow-color2};
+    color: #{$shadow-color2};
+  }
+  &:has(> .card-body) {
+    .card-body {
+      height: 100%;
+    }
+  }
+}
+.card-header {
+  display: flex;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  max-height: 15rem;
+  &:has(> .btn-primary) {
+    justify-content: space-between;
+    .btn-primary {
+      flex: none;
+    }
+  }
+}
+.card-footer {
+  width: 100%;
+  margin: auto;
+}
+.read-more {
+  --max-lines: 2;
+  --line-height: 1.4;
+  max-height: calc(var(--max-lines) * 1em * var(--line-height));
+  line-height: var(--line-height);
+  position: relative;
+  overflow: hidden;
+  &:has(+ .read-more-toggle:not(:checked))::before {
+    content: "";
+    position: absolute;
+    height: calc(1em * var(--line-height));
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, white);
+  }
+  &:has(+ .read-more-toggle:checked) {
+    max-height: none;
+  }
+}
+.read-more-toggle {
+  color: #{$text-color};
+  appearance: none;
+  cursor: pointer;
+  text-align: right;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  &::before {
+    content: "Read More";
+  }
+  &:checked::before {
+    content: "Collapse";
+  }
+}
+.message-success {
+  border-radius: 4px;
+  padding: 1rem;
+  color: #{$text-color};
+  background-color: #{$primary-color2};
+}

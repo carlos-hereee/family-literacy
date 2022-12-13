@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import shortid from "shortid";
-import Appname from "../atoms/Appname";
-import BurgerButton from "../atoms/BurgerButton";
-import Navlink from "../atoms/Navlink";
+import Appname from "../component/atoms/Appname";
+import BurgerButton from "../component/atoms/BurgerButton";
+import Navlink from "../component/atoms/Navlink";
 
 const Header = () => {
   const [menu, setMenu] = useState([
