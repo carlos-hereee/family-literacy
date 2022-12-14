@@ -30,6 +30,8 @@ import {
   faInfo,
   faListCheck,
   faPaperPlane,
+  faPlus,
+  faRepeat,
   faShoePrints,
   faShoppingCart,
   faUsd,
@@ -59,6 +61,8 @@ const svg = {
   manicure: faHands,
   pedicure: faShoePrints,
   promotion: faBullseye,
+  montly: faRepeat,
+  "one time": faPlus,
   // socials
   instagram: faInstagram,
   linkedIn: faLinkedinIn,
