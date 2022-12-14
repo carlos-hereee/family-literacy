@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Header from "./pages/Header";
 import Landing from "./pages/Landing";
 import NotFound from "./pages/Notfound";
+import Services from "./pages/Services";
 
 function App() {
   let title = "Family Literacy Network";
@@ -17,7 +18,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route path="/about" element={<About />} />
-          {/* <Route path="/services" element={<Services />} /> */}
+          <Route path="/service" element={<Services />} />
           {/* <Route path="/booking" element={<Booking />} /> */}
           {/* <Route path="/gallery" element={<Gallery />} /> */}
           {/* <Route path="/dashboard" element={<Dashboard />} /> */}

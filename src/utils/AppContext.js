@@ -19,7 +19,6 @@ export const AppState = ({ children }) => {
       title: "Lorem ipsum dolor sit amet.",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatum itaque dicta dolorum alias obcaecati, dolorem enim. Tenetur temporibus cum at error est asperiores minus ea, saepe animi laboriosam eligendi natus quas, molestiae provident, doloremque alias nulla. Consequuntur, officiis quibusdam!",
-
       hero: {
         // isEmpty: false,
         // src: "http://familyliteracy.net/assets/img/figure/figure-about.jpg",
@@ -175,6 +174,67 @@ export const AppState = ({ children }) => {
       //   },
       // ],
     },
+    services: {
+      title: "What we do",
+      description: "We offer the following programs",
+      hero: { isEmpty: true },
+      programs: [
+        {
+          uid: shortid.generate(),
+          hero: {
+            isEmpty: false,
+            src: "reading",
+            alt: "service-item",
+          },
+          title: "Reading Instruction",
+          answers: [
+            {
+              hyperlink: { isEmpty: true },
+              hero: { isEmpty: true },
+              uid: shortid.generate(),
+              response:
+                "Intervention focuses on building the skills that are necessary to start reading with understanding. These include segmenting (what is the first sound in the spoken word at ?), letter names, letter sounds, blending sounds to form words, vocabulary, and syntax (oral understanding and use of plurals, past and future tense, comparison, etc.).",
+            },
+          ],
+        },
+        {
+          uid: shortid.generate(),
+          hero: {
+            isEmpty: false,
+            src: "buld",
+            alt: "service-item",
+          },
+          title: "Comprehension",
+          answers: [
+            {
+              hyperlink: { isEmpty: true },
+              hero: { isEmpty: true },
+              uid: shortid.generate(),
+              response:
+                "Intervention focuses on helping students who have difficulty understanding what they read. Students improve comprehension by optimising fluency, by learning strategies (for self-monitoring, by learning to apply text structure, and inference - “reading between the lines”) to grasp the meaning of new words and getting the gist of a text.",
+            },
+          ],
+        },
+        {
+          uid: shortid.generate(),
+          hero: {
+            isEmpty: false,
+            src: "writing",
+            alt: "service-item",
+          },
+          title: "Writing",
+          answers: [
+            {
+              hyperlink: { isEmpty: true },
+              hero: { isEmpty: true },
+              uid: shortid.generate(),
+              response:
+                "Intervention focuses on building the organizational skills needed to become effective writers. Students become more proficient writers by learning how to plan before writing. Students become more independent writers by learning strategies for self-monitoring, editing, and revising.",
+            },
+          ],
+        },
+      ],
+    },
   };
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -191,6 +251,7 @@ export const AppState = ({ children }) => {
         about: state.about,
         socials: state.socials,
         donations: state.donations,
+        services: state.services,
         updateIsRecurring,
       }}>
       {children}
