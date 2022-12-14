@@ -4,7 +4,6 @@
 import HyperLinkText from "../atoms/HyperLinkText";
 
 const Card = ({ data, handleClick }) => {
-  // console.log('card', card)
   return (
     <div className="card">
       <div className="wrapper">

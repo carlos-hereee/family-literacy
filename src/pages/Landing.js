@@ -3,9 +3,9 @@ import About from "./About";
 
 const Landing = () => {
   return (
-    <div>
+    <>
       <About />
-    </div>
+    </>
   );
 };
 

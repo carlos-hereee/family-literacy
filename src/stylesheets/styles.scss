@@ -74,6 +74,8 @@
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  min-width: 200px;
+  max-width: 1000px;
   gap: 1rem;
   background-color: #{$text-color};
   padding: 1rem;
@@ -88,8 +90,6 @@
   background-color: #{$text-color};
   padding: 1rem;
   border-radius: 4px;
-  min-width: 200px;
-  max-width: 600px;
   gap: 1rem;
   box-shadow: 0 1px 5px 1px #{$shadow-color};
   &:has(> .ribbon) {

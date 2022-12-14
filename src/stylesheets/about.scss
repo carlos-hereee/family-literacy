@@ -1,0 +1,13 @@
+.donations {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  gap: 1rem;
+  box-shadow: 0 1px 5px 1px #{$shadow-color};
+}
+.donations-header {
+  flex: 1;
+}
+.donations-body {
+  flex: 1;
+}

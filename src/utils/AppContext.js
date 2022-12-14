@@ -100,18 +100,27 @@ export const AppState = ({ children }) => {
         src: "",
       },
     ],
-    donations: [
-      {
-        name: "paypal",
-        src: "https://www.paypal.com/donate?token=J2caKUncHGAedMMwwN-G_umeVL6JAjHr0Q372TOvhn0Q7HWP2vBHd7L1t9d_fK9zv97iokeLc4vk1-hx",
+    donations: {
+      hero: {
+        isEmpty: true,
+        src: "",
         uid: shortid.generate(),
       },
-      // {
-      //   name: "paypal",
-      //   src: "",
-      //   uid: shortid.generate(),
-      // },
-    ],
+      missionStatement:
+        "Houston’s first and most experienced provider of explicit reading instruction",
+      paymentMethod: [
+        {
+          name: "paypal",
+          src: "https://www.paypal.com/donate?token=J2caKUncHGAedMMwwN-G_umeVL6JAjHr0Q372TOvhn0Q7HWP2vBHd7L1t9d_fK9zv97iokeLc4vk1-hx",
+          uid: shortid.generate(),
+        },
+        // {
+        //   name: "paypal",
+        //   src: "",
+        //   uid: shortid.generate(),
+        // },
+      ],
+    },
   };
   const [state, dispatch] = useReducer(reducer, initialState);
   return (

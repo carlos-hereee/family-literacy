@@ -1,24 +1,21 @@
 import { useContext } from "react";
 import { AppContext } from "../../utils/AppContext";
-import Icons from "../atoms/Icons";
+import SocialLink from "../atoms/SocialLink";
 import MissionStatement from "../molecules/MissionStatement";
 
 const Donations = () => {
-  // const { name, isEmpty } = data;
   const { donations } = useContext(AppContext);
 
   return (
     <div className="donations">
-      <MissionStatement />
-      {donations.map((d) => (
-        <a
-          key={d.uid}
-          className="social-link"
-          href={d.isEmpty ? "/#" : d.src}
-          data-state={d.name}>
-          <Icons name={d.name} size="2x" />
-        </a>
-      ))}
+      <div className="donations-header">
+        <MissionStatement content={donations.missionStatement} />
+      </div>
+      <div className="donations-body">
+        {donations.paymentMethod.map((d) => (
+          <SocialLink data={d} key={d.uid} />
+        ))}
+      </div>
     </div>
   );
 };
