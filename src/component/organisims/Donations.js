@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AppContext } from "../../utils/AppContext";
 import Icons from "../atoms/Icons";
+import PaymentLink from "../atoms/PaymentLink";
 import SocialLink from "../atoms/SocialLink";
 import CardHeader from "../molecules/CardHeader";
 import CheckButton from "../molecules/CheckButton";
@@ -27,7 +28,7 @@ const Donations = () => {
         <div className="donate-buttons">
           {donations.donate.map((d) =>
             d.isCustom ? (
-              <div className="custom-field">
+              <div className="custom-field" key={d.uid}>
                 <label htmlFor="custom">Custom Amount </label>
                 <Icons name="usd" size="2x" />
                 <input
@@ -46,9 +47,11 @@ const Donations = () => {
             )
           )}
         </div>
-        {donations.paymentMethod.map((d) => (
-          <SocialLink data={d} key={d.uid} />
-        ))}
+        <div className="payment-methods">
+          {donations.paymentMethod.map((d) => (
+            <PaymentLink data={d} key={d.uid} />
+          ))}
+        </div>
       </div>
     </div>
   );

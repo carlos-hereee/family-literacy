@@ -164,22 +164,4 @@
   justify-content: center;
   gap: 1rem;
   width: 100%;
-  [data-state="instagram"] {
-    color: #{$instagram};
-  }
-  [data-state="facebook"] {
-    color: #{$facebook};
-  }
-  [data-state="twitter"] {
-    color: #{$twitter};
-  }
-  [data-state="linkedIn"] {
-    color: #{$linkedIn};
-  }
-}
-
-.donations {
-  [data-state="paypal"] {
-    color: #{$paypal};
-  }
 }

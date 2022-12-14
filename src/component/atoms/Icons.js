@@ -1,4 +1,5 @@
 import {
+  faCcVisa,
   faFacebook,
   faInstagram,
   faLinkedinIn,
@@ -69,6 +70,7 @@ const svg = {
   facebook: faFacebook,
   twitter: faTwitter,
   paypal: faPaypal,
+  visa: faCcVisa,
   x: faX,
   1: fa1,
   2: fa2,
