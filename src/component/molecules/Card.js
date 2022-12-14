@@ -1,7 +1,10 @@
 // import Photo from "../atoms/Photo";
 // import ReadMore from "./ReadMore";
 
+import HyperLinkText from "../atoms/HyperLinkText";
+
 const Card = ({ data, handleClick }) => {
+  // console.log('card', card)
   return (
     <div className="card">
       <div className="wrapper">
@@ -12,11 +15,13 @@ const Card = ({ data, handleClick }) => {
       </div>
       <div className="card-body">
         {data.answers &&
-          data.answers.map((a) => (
-            <div key={a.uid}>
-              <p>{a.response}</p>
-            </div>
-          ))}
+          data.answers.map((a) =>
+            a.hyperlink.isEmpty ? (
+              <p key={a.uid}>{a.response}</p>
+            ) : (
+              <HyperLinkText data={a} />
+            )
+          )}
       </div>
     </div>
   );
