@@ -18,7 +18,8 @@ export const AppState = ({ children }) => {
       uid: shortid.generate(),
       title: "Lorem ipsum dolor sit amet.",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam perferendis, consequatur suscipit consectetur minus ex!",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatum itaque dicta dolorum alias obcaecati, dolorem enim. Tenetur temporibus cum at error est asperiores minus ea, saepe animi laboriosam eligendi natus quas, molestiae provident, doloremque alias nulla. Consequuntur, officiis quibusdam!",
+
       hero: {
         // isEmpty: false,
         // src: "http://familyliteracy.net/assets/img/figure/figure-about.jpg",
@@ -139,7 +140,7 @@ export const AppState = ({ children }) => {
         {
           name: "visa",
           types: ["mastercard", "visa", "discover", "american-express"],
-          src: "https://www.paypal.com/donate?token=J2caKUncHGAedMMwwN-G_umeVL6JAjHr0Q372TOvhn0Q7HWP2vBHd7L1t9d_fK9zv97iokeLc4vk1-hx",
+          src: "/visa",
           uid: shortid.generate(),
         },
         // {
@@ -148,6 +149,31 @@ export const AppState = ({ children }) => {
         //   uid: shortid.generate(),
         // },
       ],
+      // disclaimers: [
+      //   {
+      //     uid: shortid.generate(),
+      //     response: [
+      //       {
+      //         uid: shortid.generate(),
+      //         text: "Family Literacy Network is commited to your privacy; please read our privacy policy here.",
+      //         hyperlink: {
+      //           isEmpty: false,
+      //           word: "privacy policy here",
+      //           src: "/#",
+      //         },
+      //       },
+      //       {
+      //         uid: shortid.generate(),
+      //         text: "Your payment details will be processed by (INSERT NAME HERE), a PayPal company",
+      //         hyperlink: {
+      //           isEmpty: false,
+      //           word: "privacy policy here",
+      //           src: "/#",
+      //         },
+      //       },
+      //     ],
+      //   },
+      // ],
     },
   };
   const [state, dispatch] = useReducer(reducer, initialState);

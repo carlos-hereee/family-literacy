@@ -8,7 +8,7 @@ const About = () => {
   const { about } = useContext(AppContext);
   return (
     <section className="card-container">
-      {/* <Card data={about} /> */}
+      <Card data={about} />
       <Donations />
       <FollowUs />
     </section>

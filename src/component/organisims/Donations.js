@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { AppContext } from "../../utils/AppContext";
 import Icons from "../atoms/Icons";
 import PaymentLink from "../atoms/PaymentLink";
-import SocialLink from "../atoms/SocialLink";
 import CardHeader from "../molecules/CardHeader";
 import CheckButton from "../molecules/CheckButton";
 
