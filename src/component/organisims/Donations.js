@@ -1,16 +1,15 @@
 import { useContext } from "react";
 import { AppContext } from "../../utils/AppContext";
 import SocialLink from "../atoms/SocialLink";
+import CardHeader from "../molecules/CardHeader";
 import CheckButton from "../molecules/CheckButton";
-import MissionStatement from "../molecules/MissionStatement";
 
 const Donations = () => {
-  const { donations, updateIsRecurring } = useContext(AppContext);
+  const { about, donations, updateIsRecurring } = useContext(AppContext);
+  console.log("donations", donations);
   return (
     <div className="donations">
-      <div className="donations-header">
-        <MissionStatement content={donations.missionStatement} />
-      </div>
+      <CardHeader data={about} />
       <div className="donations-body">
         <h4>Donate Now</h4>
         <div className="donation-recurrence-container">
@@ -23,7 +22,6 @@ const Donations = () => {
             click={() => updateIsRecurring(false)}
           />
         </div>
-
         {donations.paymentMethod.map((d) => (
           <SocialLink data={d} key={d.uid} />
         ))}

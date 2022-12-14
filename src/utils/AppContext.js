@@ -16,8 +16,9 @@ export const AppState = ({ children }) => {
     ],
     about: {
       uid: shortid.generate(),
-      missionStatement:
-        "Houston’s first and most experienced provider of explicit reading instruction",
+      title: "Lorem ipsum dolor sit amet.",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam perferendis, consequatur suscipit consectetur minus ex!",
       hero: {
         // isEmpty: false,
         // src: "http://familyliteracy.net/assets/img/figure/figure-about.jpg",
@@ -25,7 +26,6 @@ export const AppState = ({ children }) => {
         src: "",
         alt: "main-hero",
       },
-      question: "A Story Of Us",
       answers: [
         {
           uid: shortid.generate(),

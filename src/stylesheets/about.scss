@@ -1,8 +1,6 @@
 .donations {
   @include card();
   flex-direction: row;
-}
-.donations-header {
   flex: 1;
 }
 .donations-body {
