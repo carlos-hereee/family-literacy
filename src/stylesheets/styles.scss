@@ -179,3 +179,9 @@
     color: #{$linkedIn};
   }
 }
+
+.donations {
+  [data-state="paypal"] {
+    color: #{$paypal};
+  }
+}

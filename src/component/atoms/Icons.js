@@ -2,6 +2,7 @@ import {
   faFacebook,
   faInstagram,
   faLinkedinIn,
+  faPaypal,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -63,6 +64,7 @@ const svg = {
   linkedIn: faLinkedinIn,
   facebook: faFacebook,
   twitter: faTwitter,
+  paypal: faPaypal,
   x: faX,
   1: fa1,
   2: fa2,
