@@ -115,12 +115,12 @@ export const AppState = ({ children }) => {
         },
         {
           isCustom: false,
-          amount: "50",
+          amount: "$50",
           uid: shortid.generate(),
         },
         {
           isCustom: false,
-          amount: "100",
+          amount: "$100",
           uid: shortid.generate(),
         },
         {
@@ -132,6 +132,13 @@ export const AppState = ({ children }) => {
       paymentMethod: [
         {
           name: "paypal",
+          types: ["paypal"],
+          src: "https://www.paypal.com/donate?token=J2caKUncHGAedMMwwN-G_umeVL6JAjHr0Q372TOvhn0Q7HWP2vBHd7L1t9d_fK9zv97iokeLc4vk1-hx",
+          uid: shortid.generate(),
+        },
+        {
+          name: "card",
+          types: ["mastercard", "visa", "discover", "american-express"],
           src: "https://www.paypal.com/donate?token=J2caKUncHGAedMMwwN-G_umeVL6JAjHr0Q372TOvhn0Q7HWP2vBHd7L1t9d_fK9zv97iokeLc4vk1-hx",
           uid: shortid.generate(),
         },

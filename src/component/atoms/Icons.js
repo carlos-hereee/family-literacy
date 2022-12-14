@@ -48,7 +48,6 @@ const svg = {
   gallery: faImage,
   contact: faEnvelope,
   checkout: faShoppingCart,
-  pricing: faUsd,
   check: faCheckCircle,
   uncheck: faCircle,
   submit: faPaperPlane,
@@ -61,6 +60,7 @@ const svg = {
   manicure: faHands,
   pedicure: faShoePrints,
   promotion: faBullseye,
+  usd: faUsd,
   montly: faRepeat,
   "one time": faPlus,
   // socials
