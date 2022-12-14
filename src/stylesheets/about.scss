@@ -11,3 +11,11 @@
 .donations-body {
   flex: 1;
 }
+.donation-recurrence-container {
+  display: flex;
+}
+.check-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
