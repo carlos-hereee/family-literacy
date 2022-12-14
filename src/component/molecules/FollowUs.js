@@ -1,17 +1,17 @@
 import { useContext } from "react";
 import { AppContext } from "../../utils/AppContext";
-import Icons from "../atoms/Icons";
+import SocialLink from "../atoms/SocialLink";
 
 const FollowUs = () => {
   const { socials } = useContext(AppContext);
   return (
-    <div className="socials">
+    <div className="container">
       <h4>Dont Miss a thing! Follow Us!</h4>
-      {socials.map((s) => (
-        <a href={s.link} key={s.uid} className={`social-link ${s.social}`}>
-          <Icons name={s.social} size="2x" />
-        </a>
-      ))}
+      <div className="socials">
+        {socials.map((s) => (
+          <SocialLink data={s} key={s.uid} />
+        ))}
+      </div>
     </div>
   );
 };

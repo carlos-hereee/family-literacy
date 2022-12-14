@@ -1,4 +1,9 @@
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedinIn,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 import {
   fa0,
   fa1,
@@ -38,7 +43,7 @@ const svg = {
   services: faListCheck,
   booking: faCalendarAlt,
   gallery: faImage,
-  "contact us": faEnvelope,
+  contact: faEnvelope,
   checkout: faShoppingCart,
   pricing: faUsd,
   check: faCheckCircle,
@@ -46,7 +51,6 @@ const svg = {
   submit: faPaperPlane,
   dashboard: faUser,
   burger: faBars,
-  instagram: faInstagram,
   wig: faUser,
   braids: faUser,
   nail: faHandSpock,
@@ -54,6 +58,11 @@ const svg = {
   manicure: faHands,
   pedicure: faShoePrints,
   promotion: faBullseye,
+  // socials
+  instagram: faInstagram,
+  linkedIn: faLinkedinIn,
+  facebook: faFacebook,
+  twitter: faTwitter,
   x: faX,
   1: fa1,
   2: fa2,

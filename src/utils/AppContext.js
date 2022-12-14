@@ -6,6 +6,7 @@ export const AppContext = createContext();
 export const AppState = ({ children }) => {
   const initialState = {
     isLoading: false,
+    app: [],
     menu: [
       { name: "Home", isActive: true, uid: shortid.generate() },
       { name: "About", isActive: false, uid: shortid.generate() },
@@ -18,6 +19,7 @@ export const AppState = ({ children }) => {
         uid: shortid.generate(),
         question: "A Story Of Us",
         hero: {
+          isEmpty: false,
           src: "http://familyliteracy.net/assets/img/figure/figure-about.jpg",
           alt: "main-hero",
         },
@@ -27,6 +29,7 @@ export const AppState = ({ children }) => {
           {
             uid: shortid.generate(),
             hero: {
+              isEmpty: true,
               src: "",
               alt: "",
             },
@@ -36,6 +39,7 @@ export const AppState = ({ children }) => {
           {
             uid: shortid.generate(),
             hero: {
+              isEmpty: true,
               src: "",
               alt: "",
             },
@@ -45,6 +49,7 @@ export const AppState = ({ children }) => {
           {
             uid: shortid.generate(),
             hero: {
+              isEmpty: true,
               src: "",
               alt: "",
             },
@@ -54,8 +59,32 @@ export const AppState = ({ children }) => {
         ],
       },
     ],
-    app: [],
-    socials: [],
+    socials: [
+      {
+        uid: shortid.generate(),
+        isEmpty: true,
+        name: "instagram",
+        src: "",
+      },
+      {
+        uid: shortid.generate(),
+        isEmpty: true,
+        name: "facebook",
+        src: "",
+      },
+      {
+        uid: shortid.generate(),
+        isEmpty: true,
+        name: "twitter",
+        src: "",
+      },
+      {
+        uid: shortid.generate(),
+        isEmpty: true,
+        name: "linkedIn",
+        src: "",
+      },
+    ],
   };
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
