@@ -1,9 +1,6 @@
 .donations {
-  display: flex;
+  @include card();
   flex-direction: row;
-  padding: 1rem;
-  gap: 1rem;
-  box-shadow: 0 1px 5px 1px #{$shadow-color};
 }
 .donations-header {
   flex: 1;

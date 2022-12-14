@@ -2,7 +2,6 @@
 
 // $breakpoint is the variable that can have several values */
 @mixin devices($breakpoint) {
-
   /* //the name of the mixin is devices */
   @if $breakpoint ==tablet {
     @media only screen and (max-width: #{$table}) {
@@ -16,7 +15,13 @@
     }
   }
 }
-
+@mixin card() {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  box-shadow: 0 1px 5px 1px #{$shadow-color};
+  border-radius: 4px;
+}
 @keyframes slide-left {
   0% {
     overflow: hidden;

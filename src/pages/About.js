@@ -1,13 +1,12 @@
 import { useContext } from "react";
-import Card from "../component/molecules/Card";
 import Donations from "../component/organisims/Donations";
 import FollowUs from "../component/molecules/FollowUs";
 import { AppContext } from "../utils/AppContext";
 import Hero from "../component/atoms/Hero";
+import Answer from "../component/molecules/Answer";
 
 const About = () => {
   const { about } = useContext(AppContext);
-  console.log("about", about);
   return (
     <section className="card-container">
       <div className="card">
@@ -16,10 +15,13 @@ const About = () => {
           <h3 className="title">{about.question}</h3>
           <p>{about.missionStatement}</p>
         </div>
+        <div className="card-body">
+          {about.answers.map((answer) => (
+            <Answer data={answer} key={answer.uid} />
+          ))}
+        </div>
       </div>
-      {/* {about && about.map((abt) => <Card data={abt} key={abt.uid} />)} */}
       <Donations />
-      {/* {abt && abt.answers.map((a) => <Card data={a} key={a.uid} />)} */}
       <FollowUs />
     </section>
   );

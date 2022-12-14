@@ -1,12 +1,9 @@
 const HyperLinkText = ({ data }) => {
-  const { hyperlink, response } = data;
-  const { word, src } = hyperlink;
-  const responseArr = response.split(word);
   return (
     <p>
-      <span>{responseArr[0]}</span>
-      <a href={src}> {word}</a>
-      <span>{responseArr[1]}</span>
+      <span>{data.responseArr[0]}</span>
+      <a href={data.src}> {data.word}</a>
+      <span>{data.responseArr[1]}</span>
     </p>
   );
 };

@@ -19,8 +19,10 @@ export const AppState = ({ children }) => {
       missionStatement:
         "Houston’s first and most experienced provider of explicit reading instruction",
       hero: {
-        isEmpty: false,
-        src: "http://familyliteracy.net/assets/img/figure/figure-about.jpg",
+        // isEmpty: false,
+        // src: "http://familyliteracy.net/assets/img/figure/figure-about.jpg",
+        isEmpty: true,
+        src: "",
         alt: "main-hero",
       },
       question: "A Story Of Us",
