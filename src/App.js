@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { Route, Routes } from "react-router";
+import Donations from "./component/organisims/Donations";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Header from "./pages/Header";
 import Landing from "./pages/Landing";
 import NotFound from "./pages/Notfound";
@@ -19,8 +21,8 @@ function App() {
           <Route exact path="/" element={<Landing />} />
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<Services />} />
-          {/* <Route path="/booking" element={<Booking />} /> */}
-          {/* <Route path="/gallery" element={<Gallery />} /> */}
+          <Route path="/donate" element={<Donations />} />
+          <Route path="/contact" element={<Contact />} />
           {/* <Route path="/dashboard" element={<Dashboard />} /> */}
           {/* <Route path="/admin-dashboard" element={<AdminDashboard />} /> */}
           {/* <Route path="/sign-up" element={<SignUp />} /> */}

@@ -182,7 +182,7 @@ export const AppState = ({ children }) => {
         {
           uid: shortid.generate(),
           hero: {
-            isEmpty: false,
+            isEmpty: true,
             src: "reading",
             alt: "service-item",
           },
@@ -200,7 +200,7 @@ export const AppState = ({ children }) => {
         {
           uid: shortid.generate(),
           hero: {
-            isEmpty: false,
+            isEmpty: true,
             src: "buld",
             alt: "service-item",
           },
@@ -218,7 +218,7 @@ export const AppState = ({ children }) => {
         {
           uid: shortid.generate(),
           hero: {
-            isEmpty: false,
+            isEmpty: true,
             src: "writing",
             alt: "service-item",
           },
