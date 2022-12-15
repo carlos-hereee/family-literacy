@@ -31,6 +31,7 @@ import {
   faInfo,
   faListCheck,
   faPaperPlane,
+  faPhone,
   faPlus,
   faRepeat,
   faShoePrints,
@@ -47,7 +48,6 @@ const svg = {
   services: faListCheck,
   booking: faCalendarAlt,
   gallery: faImage,
-  contact: faEnvelope,
   checkout: faShoppingCart,
   check: faCheckCircle,
   uncheck: faCircle,
@@ -64,6 +64,10 @@ const svg = {
   usd: faUsd,
   montly: faRepeat,
   "one time": faPlus,
+  // contact us page
+  phone: faPhone,
+  email: faEnvelope,
+  business: faHome,
   // socials
   instagram: faInstagram,
   linkedIn: faLinkedinIn,

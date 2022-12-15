@@ -10,6 +10,7 @@ const Card = ({ data, handleClick }) => {
           <Answer data={answer} key={answer.uid} />
         ))}
       </div>
+      {/* <FollowUs /> */}
     </div>
   );
 };

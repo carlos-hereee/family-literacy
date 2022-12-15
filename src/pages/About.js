@@ -10,7 +10,6 @@ const About = () => {
     <section className="card-container">
       <Card data={about} />
       <Donations />
-      <FollowUs />
     </section>
   );
 };

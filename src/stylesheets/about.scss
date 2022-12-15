@@ -51,6 +51,7 @@
     background-color: #{$primary-color};
     color: #{$text-color};
     border-radius: 4px;
+    box-shadow: 0 0 3px 0px #{$shadow-color2};
     display: flex;
     align-items: center;
     gap: 0.5rem;

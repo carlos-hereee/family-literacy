@@ -235,6 +235,38 @@ export const AppState = ({ children }) => {
         },
       ],
     },
+    contact: {
+      uid: shortid.generate(),
+      title: "Get In Touch",
+      description: "Send us a message",
+      hero: { isEmpty: true },
+      contacts: [
+        {
+          uid: shortid.generate(),
+          title: "Phone Number",
+          icon: "phone",
+          description: "713-784-7373",
+        },
+        {
+          uid: shortid.generate(),
+          title: "Email For Questions",
+          icon: "email",
+          description: "help@familyliteracy.net",
+        },
+        {
+          uid: shortid.generate(),
+          title: "Email For Changes In Schedule",
+          icon: "email",
+          description: "schedule@familyliteracy.net",
+        },
+        {
+          uid: shortid.generate(),
+          title: "Business Address",
+          icon: "business",
+          description: "3130 Rogerdale Ste.180 Houston Tx 77042",
+        },
+      ],
+    },
   };
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -252,6 +284,7 @@ export const AppState = ({ children }) => {
         socials: state.socials,
         donations: state.donations,
         services: state.services,
+        contact: state.contact,
         updateIsRecurring,
       }}>
       {children}

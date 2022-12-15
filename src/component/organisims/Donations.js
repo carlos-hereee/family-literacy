@@ -4,6 +4,7 @@ import Icons from "../atoms/Icons";
 import PaymentLink from "../atoms/PaymentLink";
 import CardHeader from "../molecules/CardHeader";
 import CheckButton from "../molecules/CheckButton";
+import FollowUs from "../molecules/FollowUs";
 
 const Donations = () => {
   const { about, donations, updateIsRecurring } = useContext(AppContext);
