@@ -6,7 +6,6 @@ import { AppContext } from "../utils/AppContext";
 
 const Services = () => {
   const { services } = useContext(AppContext);
-  console.log("services", services.programs);
 
   return (
     <div className="container">

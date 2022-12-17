@@ -5,8 +5,8 @@ header {
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
-  background-color: #{$secondary-color};
-  border-bottom: 1px solid #{$secondary-color2};
+  background-color: #{$secondary-color2};
+  border-bottom: 1px solid #{$secondary-color3};
   position: sticky;
   top: 0;
   z-index: 2;
@@ -28,6 +28,9 @@ header {
   border-radius: 4px;
   gap: 1rem;
   transition: clip-path ease-in-out 700ms;
+  background-color: #{$secondary-color};
+  width: 50vw;
+  height: 100vh;
   @include devices(mobile) {
     display: none;
     position: absolute;
@@ -55,8 +58,11 @@ header {
 
 .nav-link {
   flex: 1;
+  display: flex;
+  justify-content: center;
   padding: 1rem;
   border-radius: 4px;
+  color: #{$text-color3};
   position: relative;
   text-decoration: none;
   margin: auto;

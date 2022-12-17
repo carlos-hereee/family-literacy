@@ -3,17 +3,17 @@ import React from "react";
 import Icons from "../atoms/Icons";
 // import SetNotificationCount from "../molecules/SetNotificationCount";
 
-const BurgerButton = ({ options, click }) => {
+const BurgerButton = ({ isBurger, click }) => {
   // const { burgerOptions } = useContext(GlamourellaContext);
   return (
     <button
       type="button"
       onClick={click}
-      className={`${options.name} btn-icons`}
+      className={`${isBurger ? "x" : "burger"} btn-icons`}
       aria-controls="primary-navigation"
-      aria-expanded={options.name === "x"}
+      aria-expanded={isBurger === "x"}
       aria-label="menu">
-      <Icons name={options.name.toLowerCase()} size="2x" />
+      <Icons name={isBurger ? "x" : "burger"} size="2x" />
       {/* <SetNotificationCount count={options.notification} /> */}
     </button>
   );

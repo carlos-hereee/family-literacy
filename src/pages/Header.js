@@ -8,7 +8,6 @@ const Header = () => {
   const { menu } = useContext(AppContext);
   const [isActive, setActive] = useState(false);
   const [isClose, setClose] = useState(false);
-  const [burger, setBurger] = useState({ name: "burger" });
   useEffect(() => {
     const endAnimation = () => setClose(true);
     // TODO: close navigation is clicks outside container
@@ -25,22 +24,19 @@ const Header = () => {
       // document.removeEventListener("mousedown", onClick, true);
     };
   }, []);
-  const handleClick = () => {
-    setActive(!isActive);
-    setBurger({ name: isActive ? "burger" : "x" });
-  };
 
-  // TODO: closing annimation
+  const handleClick = () => setActive(!isActive);
+
   return (
     <header>
       <Appname />
       <nav className="primary-navigation">
-        <BurgerButton options={burger} click={handleClick} />
+        <BurgerButton isBurger={isActive} click={handleClick} />
         <ul
           className="navigation"
           data-state={isActive ? "open" : isClose ? "closing" : "close"}>
           {menu.map((m) => (
-            <Navlink key={m.uid} data={m} />
+            <Navlink key={m.uid} data={m} click={handleClick} />
           ))}
         </ul>
       </nav>
