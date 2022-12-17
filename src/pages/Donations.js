@@ -6,14 +6,14 @@ import CardHeader from "../component/molecules/CardHeader";
 import CheckButton from "../component/molecules/CheckButton";
 
 const Donations = () => {
-  const { about, donations, updateIsRecurring } = useContext(AppContext);
+  const { donations, updateIsRecurring } = useContext(AppContext);
   const [custom, setCustom] = useState("");
   const change = (e) => setCustom(e.target.value);
   return (
     <section className="card donations">
-      <CardHeader data={about} />
+      <CardHeader data={donations} />
       <div className="card-body">
-        <h4 className="sub-title">Donate</h4>
+        <h3 className="sub-title">Donate</h3>
         <div className="donation-recurrence-container">
           <CheckButton
             data={{ isRecurring: donations.isRecurring, content: "One Time" }}

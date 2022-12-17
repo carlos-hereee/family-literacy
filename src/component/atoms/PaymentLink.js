@@ -1,10 +1,9 @@
 import Icons from "./Icons";
 
 const PaymentLink = ({ data }) => {
-  const { name, isEmpty } = data;
-
+  const { name, isEmpty, src } = data;
   return (
-    <a className="payment-link" href={isEmpty ? "/#" : name} data-state={name}>
+    <a className="payment-link" href={isEmpty ? "/#" : src} data-state={name}>
       <Icons name={name} size="2x" />
       {name}
     </a>

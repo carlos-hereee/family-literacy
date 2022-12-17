@@ -1,14 +1,18 @@
 import { useContext } from "react";
-import Donations from "./Donations";
 import { AppContext } from "../utils/AppContext";
-import Card from "../component/organisims/Card";
+import Answer from "../component/molecules/Answer";
+import CardHeader from "../component/molecules/CardHeader";
 
 const About = () => {
   const { about } = useContext(AppContext);
   return (
-    <section className="card-container">
-      <Card data={about} />
-      <Donations />
+    <section className="card">
+      <CardHeader data={about} />
+      <div className="card-body">
+        {about.answers.map((answer) => (
+          <Answer data={answer} key={answer.uid} />
+        ))}
+      </div>
     </section>
   );
 };

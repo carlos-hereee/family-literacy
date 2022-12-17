@@ -7,13 +7,13 @@ import { AppContext } from "../utils/AppContext";
 const Contact = () => {
   const { contact } = useContext(AppContext);
   return (
-    <div className="card-container">
+    <section className="card">
       <CardHeader data={contact} />
       {contact.contacts.map((c) => (
         <ContactLink data={c} key={c.uid} />
       ))}
       <FollowUs />
-    </div>
+    </section>
   );
 };
 

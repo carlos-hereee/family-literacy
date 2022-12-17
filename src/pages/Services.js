@@ -8,16 +8,14 @@ const Services = () => {
   const { services } = useContext(AppContext);
 
   return (
-    <div className="container">
-      <div className="card">
-        <CardHeader data={services} />
-        <div className="card-body">
-          {services.programs.map((l) => (
-            <CardSection data={l} key={l.uid} />
-          ))}
-        </div>
+    <section className="card">
+      <CardHeader data={services} />
+      <div className="card-body">
+        {services.programs.map((l) => (
+          <CardSection data={l} key={l.uid} />
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

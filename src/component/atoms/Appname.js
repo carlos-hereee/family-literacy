@@ -1,5 +1,5 @@
 const Appname = () => {
-  return <h2>Family Literacy Network</h2>;
+  return <h1>Family Literacy Network</h1>;
 };
 
 export default Appname;

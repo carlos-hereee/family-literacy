@@ -16,9 +16,9 @@ export const AppState = ({ children }) => {
     ],
     about: {
       uid: shortid.generate(),
-      title: "Lorem ipsum dolor sit amet.",
+      title: "About us",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatum itaque dicta dolorum alias obcaecati, dolorem enim. Tenetur temporibus cum at error est asperiores minus ea, saepe animi laboriosam eligendi natus quas, molestiae provident, doloremque alias nulla. Consequuntur, officiis quibusdam!",
+        "Houston’s first and most experienced provider of explicit reading instruction",
       hero: {
         // isEmpty: false,
         // src: "http://familyliteracy.net/assets/img/figure/figure-about.jpg",
@@ -101,7 +101,17 @@ export const AppState = ({ children }) => {
       },
     ],
     donations: {
+      title: "Family Literacy Network",
+      description:
+        "Houston’s first and most experienced provider of explicit reading instruction",
       isRecurring: false,
+      hero: {
+        // isEmpty: false,
+        // src: "http://familyliteracy.net/assets/img/figure/figure-about.jpg",
+        isEmpty: true,
+        src: "",
+        alt: "main-hero",
+      },
       donate: [
         {
           isCustom: false,
@@ -131,12 +141,14 @@ export const AppState = ({ children }) => {
       ],
       paymentMethod: [
         {
+          isEmpty: false,
           name: "paypal",
           types: ["paypal"],
-          src: "https://www.paypal.com/donate?token=J2caKUncHGAedMMwwN-G_umeVL6JAjHr0Q372TOvhn0Q7HWP2vBHd7L1t9d_fK9zv97iokeLc4vk1-hx",
+          src: "https://www.paypal.com/donate?token=1LgJwojMGnpi0ZA9VAizMFxZh4p0Lty1EpdmvLvAQ_cGFiHG4q0vctwfxf-GnJbn5rMz9TP1BNZu4XR3",
           uid: shortid.generate(),
         },
         {
+          isEmpty: true,
           name: "visa",
           types: ["mastercard", "visa", "discover", "american-express"],
           src: "/visa",
@@ -183,6 +195,8 @@ export const AppState = ({ children }) => {
           uid: shortid.generate(),
           hero: {
             isEmpty: true,
+            isIcon: true,
+            icon: "book",
             src: "reading",
             alt: "service-item",
           },
@@ -201,7 +215,9 @@ export const AppState = ({ children }) => {
           uid: shortid.generate(),
           hero: {
             isEmpty: true,
-            src: "buld",
+            isIcon: true,
+            icon: "bulb",
+            src: "bulb",
             alt: "service-item",
           },
           title: "Comprehension",
@@ -218,6 +234,8 @@ export const AppState = ({ children }) => {
         {
           uid: shortid.generate(),
           hero: {
+            isIcon: true,
+            icon: "notebook",
             isEmpty: true,
             src: "writing",
             alt: "service-item",
