@@ -1,6 +1,5 @@
 import { useContext } from "react";
-import Donations from "../component/organisims/Donations";
-import FollowUs from "../component/molecules/FollowUs";
+import Donations from "./Donations";
 import { AppContext } from "../utils/AppContext";
 import Card from "../component/organisims/Card";
 

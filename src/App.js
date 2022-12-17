@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Route, Routes } from "react-router";
-import Donations from "./component/organisims/Donations";
+import Donations from "./pages/Donations";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Header from "./pages/Header";

@@ -9,10 +9,10 @@ const Contact = () => {
   return (
     <div className="card-container">
       <CardHeader data={contact} />
-      {/* <FollowUs /> */}
       {contact.contacts.map((c) => (
         <ContactLink data={c} key={c.uid} />
       ))}
+      <FollowUs />
     </div>
   );
 };

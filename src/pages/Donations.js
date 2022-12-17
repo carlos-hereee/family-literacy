@@ -1,19 +1,18 @@
 import { useContext, useState } from "react";
-import { AppContext } from "../../utils/AppContext";
-import Icons from "../atoms/Icons";
-import PaymentLink from "../atoms/PaymentLink";
-import CardHeader from "../molecules/CardHeader";
-import CheckButton from "../molecules/CheckButton";
-import FollowUs from "../molecules/FollowUs";
+import { AppContext } from "../utils/AppContext";
+import Icons from "../component/atoms/Icons";
+import PaymentLink from "../component/atoms/PaymentLink";
+import CardHeader from "../component/molecules/CardHeader";
+import CheckButton from "../component/molecules/CheckButton";
 
 const Donations = () => {
   const { about, donations, updateIsRecurring } = useContext(AppContext);
   const [custom, setCustom] = useState("");
   const change = (e) => setCustom(e.target.value);
   return (
-    <div className="donations">
+    <section className="card donations">
       <CardHeader data={about} />
-      <div className="donations-body">
+      <div className="card-body">
         <h4 className="sub-title">Donate</h4>
         <div className="donation-recurrence-container">
           <CheckButton
@@ -37,7 +36,7 @@ const Donations = () => {
                   name="custom"
                   className="custom"
                   type="number"
-                  placeholder="5"
+                  placeholder="Other"
                 />
               </div>
             ) : (
@@ -53,7 +52,7 @@ const Donations = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

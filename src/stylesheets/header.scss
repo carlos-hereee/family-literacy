@@ -28,10 +28,10 @@ header {
   border-radius: 4px;
   gap: 1rem;
   transition: clip-path ease-in-out 700ms;
-  background-color: #{$secondary-color};
-  width: 50vw;
-  height: 100vh;
   @include devices(mobile) {
+    background-color: #{$secondary-color};
+    width: 50vw;
+    height: 100vh;
     display: none;
     position: absolute;
     top: 100%;
@@ -70,7 +70,8 @@ header {
     background-color: #{$secondary-color2};
   }
 }
-.burger {
+.burger,
+.x {
   display: none;
   @include devices(mobile) {
     display: block;

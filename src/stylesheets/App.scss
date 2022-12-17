@@ -33,7 +33,6 @@ button {
 
 .App {
   position: relative;
-  text-align: center;
   // background-color: var(--primary-color);
   min-height: 100vh;
   color: var(--text-color3);
@@ -41,6 +40,7 @@ button {
 .app-body {
   display: flex;
   justify-content: center;
+  text-align: left;
   padding: 1rem;
 }
 

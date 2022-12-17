@@ -5,9 +5,9 @@ import SocialLink from "../atoms/SocialLink";
 const FollowUs = () => {
   const { socials } = useContext(AppContext);
   return (
-    <div className="container">
-      <h4>Dont Miss a thing! Follow Us!</h4>
-      <div className="socials">
+    <div className="socials">
+      <h4 className="title">Dont miss a thing, Follow us on our socials</h4>
+      <div className="socials-icons">
         {socials.map((s) => (
           <SocialLink data={s} key={s.uid} />
         ))}
