@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import CardBody from "../component/molecules/CardBody";
 import CardHeader from "../component/molecules/CardHeader";
+import CardSection from "../component/molecules/CardSection";
 // import Card from "../component/organisims/Card";
 import { AppContext } from "../utils/AppContext";
 
 const Services = () => {
   const { services } = useContext(AppContext);
-  // console.log("services", services);
+  console.log("services", services.programs);
 
   return (
     <div className="container">
@@ -14,10 +14,7 @@ const Services = () => {
         <CardHeader data={services} />
         <div className="card-body">
           {services.programs.map((l) => (
-            <div key={l.uid}>
-              <CardHeader data={l} />
-              <CardBody data={l} />
-            </div>
+            <CardSection data={l} key={l.uid} />
           ))}
         </div>
       </div>

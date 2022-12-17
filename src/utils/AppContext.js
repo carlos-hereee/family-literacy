@@ -187,7 +187,7 @@ export const AppState = ({ children }) => {
             alt: "service-item",
           },
           title: "Reading Instruction",
-          answers: [
+          section: [
             {
               hyperlink: { isEmpty: true },
               hero: { isEmpty: true },
@@ -205,7 +205,7 @@ export const AppState = ({ children }) => {
             alt: "service-item",
           },
           title: "Comprehension",
-          answers: [
+          section: [
             {
               hyperlink: { isEmpty: true },
               hero: { isEmpty: true },
@@ -223,7 +223,7 @@ export const AppState = ({ children }) => {
             alt: "service-item",
           },
           title: "Writing",
-          answers: [
+          section: [
             {
               hyperlink: { isEmpty: true },
               hero: { isEmpty: true },
